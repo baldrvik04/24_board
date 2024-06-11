@@ -1,7 +1,7 @@
 body {
     background: #231F20;
     text-align: center;
-    font-family: Cursed Timer ULiL;
+    font-family: 'Cursed Timer ULiL';
 }
 
 .container {
@@ -11,90 +11,54 @@ body {
     margin: 20px auto;
     flex-direction: column;
     align-items: center;
-    border: 5px solid #FFFFFF;
-    border-radius: 10px;
+    border: 3px solid #FFFFFF;
+    border-radius: 40px;
 }
 
 .first-board {
     display: flex;
 }
-.timer {
-    background-color: #004689; /* Cambia el fondo a azul */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    margin-bottom: 20px;
-    width: calc(33.33% - 20px); /* Ancho ajustado a un tercio menos 20px para el margen */
-    margin-right: 20px; /* Agrega un margen derecho entre los cuadros */
-    float: left; /* Hace que los cuadros se alineen en línea */
-    color: white; /* Cambia el color del texto a blanco */
-}
 
-.timer h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.timer h2 {
-    font-size: 60px; /* Aumenta el tamaño del contador a 72px */
-    margin-bottom: 20px;
-}
-
-.timer button {
-    display: inline-block; /* Cambia a inline-block para que estén en línea */
-    width: calc(23% - 10px); /* Ancho ajustado a un tercio menos el margen entre botones */
-    margin: 10px 5px; /* Margen entre los botones */
-    padding: 10px;
-    background-color: #4caf50;
-    color: white; /* Cambia el color del texto a blanco */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.timer button:hover {
-    background-color: #45a049;
-}
-
-
+.timer,
 .timer14 {
-    background-color: #004689; /* Cambia el fondo a azul */
+    background-color: #004689;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
-    width: calc(33.33% - 20px); /* Ancho ajustado a un tercio menos 20px para el margen */
-    margin-right: 20px; /* Agrega un margen derecho entre los cuadros */
-    float: left; /* Hace que los cuadros se alineen en línea */
-    color: white; /* Cambia el color del texto a blanco */
+    width: calc(60% - 20px);
+    margin-right: 20px;
+    float: left;
+    color: white;
 }
 
-.timer h1 {
-    font-size: 24px;
+.timer h1,
+.timer14 h1 {
+    font-size: 70px; /* Títulos más pequeños */
     margin-bottom: 10px;
 }
 
-.timer h2 {
-    font-size: 60px; /* Aumenta el tamaño del contador a 72px */
+.timer h2,
+.timer14 h2 {
+    font-size: 80px; /* Segundos más grandes */
     margin-bottom: 20px;
 }
 
-.timer button {
-    display: inline-block; /* Cambia a inline-block para que estén en línea */
-    width: calc(23% - 10px); /* Ancho ajustado a un tercio menos el margen entre botones */
-    margin: 10px 5px; /* Margen entre los botones */
+.timer button,
+.timer14 button {
+    display: inline-block;
+    width: calc(23% - 10px);
+    margin: 10px 5px;
     padding: 10px;
     background-color: #4caf50;
-    color: white; /* Cambia el color del texto a blanco */
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.timer button:hover {
+.timer button:hover,
+.timer14 button:hover {
     background-color: #45a049;
 }
-
-
