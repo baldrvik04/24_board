@@ -1,64 +1,54 @@
 body {
     background: #231F20;
-    text-align: center;
     font-family: 'Cursed Timer ULiL';
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container {
     display: flex;
-    background: #004689;
-    width: 1400px;
-    margin: 20px auto;
     flex-direction: column;
     align-items: center;
+    background: #004689;
+    width: 100%; /* Ajustado para una pantalla de 24 pulgadas */
+    max-width: px; /* Limitamos el ancho máximo */
+    padding: 20px;
     border: 3px solid #FFFFFF;
     border-radius: 40px;
+    box-sizing: border-box;
 }
 
-.first-board {
+#board1,
+#board2 {
     display: flex;
-}
-
-.timer,
-.timer14 {
-    background-color: #004689;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 20px;
-    width: calc(60% - 20px);
-    margin-right: 20px;
-    float: left;
     color: white;
+    text-align: center;
+    width: 100%; /* Ajustamos el ancho para ocupar todo el espacio disponible */
 }
 
-.timer h1,
-.timer14 h1 {
-    font-size: 70px; /* Títulos más pequeños */
-    margin-bottom: 10px;
+.button-container {
+    display: flex;
+    justify-content: center; /* Centramos los botones horizontalmente */
+    width: 100%; /* Ajustamos el ancho para ocupar todo el espacio disponible */
 }
 
-.timer h2,
-.timer14 h2 {
-    font-size: 80px; /* Segundos más grandes */
-    margin-bottom: 20px;
-}
-
-.timer button,
-.timer14 button {
-    display: inline-block;
-    width: calc(23% - 10px);
-    margin: 10px 5px;
-    padding: 10px;
+button {
+    margin: 5px; /* Reducimos el margen */
+    padding: 8px 16px; /* Reducimos el padding para hacer los botones más pequeños */
     background-color: #4caf50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-size: 14px; /* Reducimos el tamaño de la fuente */
 }
-
-.timer button:hover,
-.timer14 button:hover {
+button:hover {
     background-color: #45a049;
 }

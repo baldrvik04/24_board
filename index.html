@@ -11,27 +11,91 @@
     <title>Basketball Scoreboard App</title>
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.cdnfonts.com/css/cursed-timer-ulil" rel="stylesheet">
+    <style>
+        body {
+            background: #231F20;
+            font-family: 'Cursed Timer ULiL';
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #004689;
+            width: 80%; /* Ajustado para una pantalla de 24 pulgadas */
+            max-width: 1400px; /* Limitamos el ancho máximo */
+            padding: 20px;
+            border: 3px solid #FFFFFF;
+            border-radius: 40px;
+            box-sizing: border-box;
+        }
+
+        #board1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            color: white;
+            text-align: center;
+            width: 100%; /* Ajustamos el ancho para ocupar todo el espacio disponible */
+        }
+
+        h1 {
+            font-size: 40px; /* Títulos 2 veces más pequeños */
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 150px; /* Contadores 4 veces más grandes */
+            margin-bottom: 20px;
+            line-height: 1; /* Ajusta el espaciado entre líneas para contadores grandes */
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center; /* Centramos los botones horizontalmente */
+            width: 100%; /* Ajustamos el ancho para ocupar todo el espacio disponible */
+            margin-top: 20px; /* Añadimos margen superior para separar los botones del contenido */
+        }
+
+        button {
+            margin: 5px; /* Reducimos el margen */
+            padding: 8px 16px; /* Reducimos el padding para hacer los botones más pequeños */
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 14px; /* Reducimos el tamaño de la fuente */
+            flex: 1; /* Hace que los botones ocupen el mismo espacio */
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
         <div id="board1">
-            <h1>24 Segundos</h1>
-            <h2 id="shot-clock-1">24</h2>
-            <button onclick="startShotClock1()">Start</button>
-            <button onclick="stopShotClock1()">Stop</button>
-            <button onclick="resetShotClock1()">Reset</button>
-            <button onclick="resetAndSwitch()">24 y 14</button>
-            <button onclick="resetAndSwitch2()">14 y 24</button>
+            <h1>Shot Clock</h1>
+            <h2 id="shot-clock">24</h2>
+            <div class="button-container">
+                <button onclick="startShotClock()">Start</button>
+                <button onclick="stopShotClock()">Stop</button>
+                <button onclick="resetShotClock()">Reset</button>
+                <button onclick="resetToZero()">24 a 14</button>
+                <button onclick="resetTo24Seconds()">Volver a 24</button>
+            </div>
         </div>
-        <div id="board2">
-            <h1>14 Segundos</h1>
-            <h2 id="shot-clock-2">14</h2>
-            <button onclick="startShotClock2()">Start</button>
-            <button onclick="stopShotClock2()">Stop</button>
-            <button onclick="resetShotClock2()">Reset</button>
-
-        </div> 
+    </div>
     <script src="index.js"></script>
 </body>
 

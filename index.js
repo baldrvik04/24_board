@@ -1,66 +1,36 @@
-let shotClockTimer1;
-let shotClockTimer2;
+let shotClockTimer;
 
-function startShotClock1() {
-    shotClockTimer1 = setInterval(updateShotClock1, 1000);
+function startShotClock() {
+    clearInterval(shotClockTimer); // Limpia el temporizador si ya está activo
+    shotClockTimer = setInterval(updateShotClock, 1000);
 }
 
-function stopShotClock1() {
-    clearInterval(shotClockTimer1);
+function stopShotClock() {
+    clearInterval(shotClockTimer);
 }
 
-function resetShotClock1() {
-    stopShotClock1();
-    document.getElementById("shot-clock-1").innerText = "24";
+function resetShotClock() {
+    clearInterval(shotClockTimer);
+    document.getElementById("shot-clock").innerText = "24";
 }
 
-function resetToZero1() {
-    document.getElementById("shot-clock-1").innerText = "0";
+function resetToZero() {
+    clearInterval(shotClockTimer);
+    document.getElementById("shot-clock").innerText = "14"; // Cambia el contador a 14 segundos
+    startShotClock(); // Inicia automáticamente el contador después de cambiar a 14 segundos
 }
 
-function updateShotClock1() {
-    const shotClockElement = document.getElementById("shot-clock-1");
+function resetTo24Seconds() {
+    clearInterval(shotClockTimer);
+    document.getElementById("shot-clock").innerText = "24";
+    startShotClock(); // Inicia automáticamente el contador después de reiniciar a 24 segundos
+}
+
+function updateShotClock() {
+    const shotClockElement = document.getElementById("shot-clock");
     let currentTime = parseInt(shotClockElement.innerText);
     if (currentTime > 0) {
         currentTime--;
         shotClockElement.innerText = currentTime;
     }
-}
-
-function startShotClock2() {
-    shotClockTimer2 = setInterval(updateShotClock2, 1000);
-}
-
-function stopShotClock2() {
-    clearInterval(shotClockTimer2);
-}
-
-function resetShotClock2() {
-    stopShotClock2();
-    document.getElementById("shot-clock-2").innerText = "14";
-}
-
-function resetToZero2() {
-    document.getElementById("shot-clock-2").innerText = "0";
-}
-
-function updateShotClock2() {
-    const shotClockElement = document.getElementById("shot-clock-2");
-    let currentTime = parseInt(shotClockElement.innerText);
-    if (currentTime > 0) {
-        currentTime--;
-        shotClockElement.innerText = currentTime;
-    }
-}
-
-function resetAndSwitch() {
-    resetToZero1();
-    resetShotClock2();
-    startShotClock2();
-}
-
-function resetAndSwitch2() {
-  resetToZero2();
-  resetShotClock1();
-  startShotClock1();
 }
